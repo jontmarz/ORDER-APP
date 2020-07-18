@@ -6,3 +6,105 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+a, p, span, input { font-family: 'Montserrat Alternates';}
+label, li, blockquote {font-family: 'Montserrat';}
+h1, h2, h3, h4, h5, h6 { font-family: 'kanit'; letter-spacing: 2px;}
+
+.ba-title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+html, body {
+    background-color: #fff;
+    color: $gray;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+
+    .title {
+        font-family: 'kanit';
+    }
+}
+
+.ba-background {
+    background-color: rgba(204, 167, 10, 0.5);
+
+    .ba-banner {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      align-items: center;
+      margin: auto;
+
+
+      p {
+        font-size: 1.3rem;;
+        text-align: center;
+      }
+    }
+}
+
+.ba-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    margin: 2vw auto 2vw auto;
+
+
+    .btn-blue {
+      color: white !important;
+      background-color: $light-blue !important;
+      border-color: $light-blue !important;
+      margin: 0 1vw;
+      font-size: 30px;
+
+      &:hover {
+        background-color: $gold !important;
+        border-color: transparent !important;
+      }
+    }
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}

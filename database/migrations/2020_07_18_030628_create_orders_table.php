@@ -15,11 +15,12 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->date('fecha');
-            $table->decimal('impuestos');
+            $table->date('date');
+            $table->string('detail');
+            $table->decimal('taxes');
             $table->decimal('total');
             $table->string('status', 50)->nullable();
-            $table->string('comentarios')->nullable();
+            $table->string('comments')->nullable();
 
             $table->timestamps();
         });
