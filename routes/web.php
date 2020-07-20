@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
+use \App\Http\Middleware\ApiAuthMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Test Orm
+Route::get('/test-orm', 'PruebasController@testOrm');
+
+// Rutas Usuario
+Route::post('/api/register', 'UserController@register');
+Route::post('/api/login', 'UserController@login');
+
+// Rutas Productos
+Route::resource('api/product', 'productController');
+
+// Rutas Ordenes
+Route::resource('api/order', 'orderController');
+
