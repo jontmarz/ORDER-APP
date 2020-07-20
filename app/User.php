@@ -36,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function product()
+    {
+        return $this->belongsToMany('\App\Product', 'calls')
+                    ->withPivot('product_id', 'status');
+    }
+
+    public function order()
+    {
+        return $this->belongsToMany('App\Order', 'calls')
+                    ->withPivot('order_id', 'status');
+    }
 }
